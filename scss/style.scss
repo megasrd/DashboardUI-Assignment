@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+}
+
+p {
+ font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topBar {
+  height: 10vh;
+  background-color: #999;
+  p {
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+.stats-panel {
+  display: inline-block;
+  height: 80vh;
+  width: 60vw;
+  background-color: #444;
+}
+
+.location-image {
+  height: 80vh;
+  width: 39vw;
+  display: inline-block;
+  background-color: #222;
+  margin: 0;
+}
+
+.cityName-panel {
+  background-color: #777;
+  margin: 0;
+}
+
+
+.location-hover {
+  bottom: 40vh;
+  left: -7em;
+  position: absolute;
+  width: 150px;
+  height: 180px;
+  background-color: #991e1e;
+  transition: all 0.5s ease;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.location_name-container {}
+
+.location-hover {
+  p {
+    width: 70%;
+    padding: 3px 0px;
+    text-align: center;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  &:hover {
+    left: 0em;
+  }
+  .city-names:hover {
+    font-size: 1.1em;
+    background-color: #611212;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+}
+
+.location-title {
+  text-align: center;
+  margin: 0;
+  font-size: 4em;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.stats-block {
+    p {
+        text-align: center;
+        display: block;
+        font-size: 1.2em;
+        margin: 5px 0px;
+    }
+}
+
+.block1 {
+  display: inline-block;
+  width: 40%;
+  height: 35%;
+  float: left;
+  background-color: dimgrey;
+}
+
+.block2 {
+  display: inline-block;
+  width: 60%;
+  height: 35%;
+  float: left;
+  background-color: #a2a2a2;
+}
+
+.block3 {
+  display: inline-block;
+  width: 50%;
+  height: 35%;
+  float: left;
+  background-color: #d9d9d9;
+}
+
+.block4 {
+  display: inline-block;
+  width: 50%;
+  height: 35%;
+  float: left;
+  background-color: #393939;
+}
+
+.block5 {
+  display: inline-block;
+  width: 33.3%;
+  height: 30%;
+  float: left;
+  background-color: #393939;
+}
+
+.block6 {
+  display: inline-block;
+  width: 66.6%;
+  height: 30%;
+  float: left;
+  background-color: #525252;
+}
+
+.ui-panel-popfx:hover {
+    
+}
+
+
+//Pie Chart
+
+@import "compass/css3";
+
+.pie {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  background-color: #2f3e46;
+  font-size: 7em;
+  text-align: center;
+  @include border-radius(50%);
+}
+.slice-right {
+  position: absolute;
+  z-index: 11;
+  background-color: #ff913b;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, .5em, .5em, .5em);
+  @include border-radius(50%);
+}
+.slice-left {
+  position: absolute;
+  z-index: 11;
+  background-color: #ff913b;
+  width: 100%;
+  height: 100%;
+  clip: rect(.5em, .5em, 1em, .5em);
+  @include border-radius(50%);
+  }
+.percent {
+  position: absolute;
+  z-index: 20;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  background: #1d2225;
+  @include border-radius(50%);
+}
+.number {
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  padding-top: 50%;
+  line-height: 0;
+  font-size: .3em;
+  color: #485c65;
+}
+
+$animation-speed: .3s;
+.slice-right {
+  -webkit-animation-delay: $animation-speed * 4;
+  -webkit-animation-duration: $animation-speed;
+  -webkit-animation-name: right-slice;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.slice-left {
+  -webkit-animation-delay: $animation-speed * 5;
+  -webkit-animation-duration: $animation-speed;
+  -webkit-animation-name: left-slice;
+  -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes right-slice {
+  from {
+    clip: rect(0, 50%, .5em, .5em);
+  }
+  50% {
+    clip: rect(0, 1em, .5em, .5em);
+  }
+  to {
+    clip: rect(0, 1em, 1em, .5em);
+  }
+}
+
+@-webkit-keyframes left-slice {
+  from {
+    clip: rect(.5em, .5em, 1em, .5em);
+  }
+  50% {
+    clip: rect(.5em, .5em, 1em, 0)
+  }
+  to {
+    clip: rect(.3em, .5em, 1em, 0);
+  }
+}
+
+
+
+//

@@ -1,0 +1,131 @@
+body {
+  margin: 0; }
+
+p {
+  font-family: 'Raleway', sans-serif; }
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.topBar {
+  height: 10vh;
+  background-color: #999; }
+  .topBar p {
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif; }
+
+.stats-panel {
+  display: inline-block;
+  height: 80vh;
+  width: 60vw;
+  background-color: #444; }
+
+.location-image {
+  height: 80vh;
+  width: 39vw;
+  display: inline-block;
+  background-color: #222;
+  margin: 0; }
+
+.cityName-panel {
+  background-color: #777;
+  margin: 0; }
+
+.location-hover {
+  bottom: 40vh;
+  left: -7em;
+  position: absolute;
+  width: 150px;
+  height: 180px;
+  background-color: #991e1e;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px; }
+
+.location-hover p {
+  width: 70%;
+  padding: 3px 0px;
+  text-align: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer; }
+
+.location-hover:hover {
+  left: 0em; }
+
+.location-hover .city-names:hover {
+  font-size: 1.1em;
+  background-color: #611212;
+  width: 100%;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.location-title {
+  text-align: center;
+  margin: 0;
+  font-size: 4em;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif; }
+
+.stats-block p {
+  text-align: center;
+  display: block;
+  font-size: 1.2em;
+  margin: 5px 0px; }
+
+.block1 {
+  display: inline-block;
+  width: 40%;
+  height: 35%;
+  float: left;
+  background-color: dimgrey; }
+
+.block2 {
+  display: inline-block;
+  width: 60%;
+  height: 35%;
+  float: left;
+  background-color: #a2a2a2; }
+
+.block3 {
+  display: inline-block;
+  width: 50%;
+  height: 35%;
+  float: left;
+  background-color: #d9d9d9; }
+
+.block4 {
+  display: inline-block;
+  width: 50%;
+  height: 35%;
+  float: left;
+  background-color: #393939; }
+
+.block5 {
+  display: inline-block;
+  width: 33.3%;
+  height: 30%;
+  float: left;
+  background-color: #393939; }
+
+.block6 {
+  display: inline-block;
+  width: 66.6%;
+  height: 30%;
+  float: left;
+  background-color: #525252; }
