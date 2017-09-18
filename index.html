@@ -23,11 +23,11 @@
         <p> Recent Events </p>
         </div>
         <div class="block4 stats-block">
-        <p> Day of the Week </p>
+        
         </div>
         <div class="block5 stats-block"> </div>
         <div class="block6 stats-block">
-        <p> Forecast for the Week </p>
+        
         </div>
         
     </div>
@@ -37,17 +37,17 @@
     <div class="location-hover">
             
            <div class="location_name-container"> 
-                <p class="city-names"> Cape Town </p>
-                <p class="city-names"> Tokyo</p>
-                <p class="city-names"> New York </p>
-                <p class="city-names"> Munich </p>
+                <p class="city-names" onclick="set_cityData(1)"> Cape Town </p>
+                <p class="city-names" onclick="set_cityData(2)"> Tokyo</p>
+                <p class="city-names" onclick="set_cityData(3)"> New York </p>
+                <p class="city-names" onclick="set_cityData(4)"> Munich </p>
             </div>
             
         </div>
         
     </div>
     
-    <div class="cityName-panel"> <p class="location-title"> CAPE TOWN </p> </div> 
+    <div class="cityName-panel"> <p class="location-title"> {{ city_name}} </p> </div> 
     
 </body>
     
