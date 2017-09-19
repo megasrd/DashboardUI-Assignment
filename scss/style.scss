@@ -17,7 +17,8 @@ p {
 
 .topBar {
   height: 10vh;
-  background-color: #999;
+  background-color: #252634;
+  border-bottom: 1px solid yellow;
   p {
     text-align: center;
     padding-top: 15px;
@@ -28,7 +29,8 @@ p {
 }
 
 .stats-panel {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   height: 80vh;
   width: 60vw;
   background-color: #444;
@@ -36,14 +38,15 @@ p {
 
 .location-image {
   height: 80vh;
-  width: 39vw;
+  width: 38.5vw;
   display: inline-block;
   background-color: #222;
   margin: 0;
 }
 
 .cityName-panel {
-  background-color: #777;
+  background-color: #252634;
+  border-top: 1px solid yellow;
   margin: 0;
 }
 
@@ -89,6 +92,7 @@ p {
   font-size: 4em;
   padding: 10px;
   font-family: 'Raleway', sans-serif;
+  color: #ffffff;
 }
 
 .stats-block {
@@ -105,7 +109,7 @@ p {
   width: 40%;
   height: 35%;
   float: left;
-  background-color: dimgrey;
+  background-color: rgb(69, 69, 69);
 }
 
 .block2 {
@@ -113,7 +117,7 @@ p {
   width: 60%;
   height: 35%;
   float: left;
-  background-color: #a2a2a2;
+  background-color: rgb(42, 42, 42);
 }
 
 .block3 {
@@ -121,7 +125,7 @@ p {
   width: 50%;
   height: 35%;
   float: left;
-  background-color: #d9d9d9;
+  background-color: rgb(44, 44, 44);
 }
 
 .block4 {
@@ -129,7 +133,7 @@ p {
   width: 50%;
   height: 35%;
   float: left;
-  background-color: #393939;
+  background-color: rgb(93, 93, 93);
 }
 
 .block5 {
@@ -137,113 +141,18 @@ p {
   width: 33.3%;
   height: 30%;
   float: left;
-  background-color: #393939;
+  background-color: rgb(69, 69, 69);
 }
 
 .block6 {
   display: inline-block;
-  width: 66.6%;
+  width: 66.7%;
   height: 30%;
   float: left;
-  background-color: #525252;
+  background-color: rgb(59, 59, 59);
 }
 
 .ui-panel-popfx:hover {
     
 }
 
-
-//Pie Chart
-
-@import "compass/css3";
-
-.pie {
-  display: inline-block;
-  position: relative;
-  width: 1em;
-  height: 1em;
-  background-color: #2f3e46;
-  font-size: 7em;
-  text-align: center;
-  @include border-radius(50%);
-}
-.slice-right {
-  position: absolute;
-  z-index: 11;
-  background-color: #ff913b;
-  width: 100%;
-  height: 100%;
-  clip: rect(0, .5em, .5em, .5em);
-  @include border-radius(50%);
-}
-.slice-left {
-  position: absolute;
-  z-index: 11;
-  background-color: #ff913b;
-  width: 100%;
-  height: 100%;
-  clip: rect(.5em, .5em, 1em, .5em);
-  @include border-radius(50%);
-  }
-.percent {
-  position: absolute;
-  z-index: 20;
-  top: 3px;
-  right: 3px;
-  bottom: 3px;
-  left: 3px;
-  background: #1d2225;
-  @include border-radius(50%);
-}
-.number {
-  position: absolute;
-  z-index: 30;
-  width: 100%;
-  height: 100%;
-  padding-top: 50%;
-  line-height: 0;
-  font-size: .3em;
-  color: #485c65;
-}
-
-$animation-speed: .3s;
-.slice-right {
-  -webkit-animation-delay: $animation-speed * 4;
-  -webkit-animation-duration: $animation-speed;
-  -webkit-animation-name: right-slice;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.slice-left {
-  -webkit-animation-delay: $animation-speed * 5;
-  -webkit-animation-duration: $animation-speed;
-  -webkit-animation-name: left-slice;
-  -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes right-slice {
-  from {
-    clip: rect(0, 50%, .5em, .5em);
-  }
-  50% {
-    clip: rect(0, 1em, .5em, .5em);
-  }
-  to {
-    clip: rect(0, 1em, 1em, .5em);
-  }
-}
-
-@-webkit-keyframes left-slice {
-  from {
-    clip: rect(.5em, .5em, 1em, .5em);
-  }
-  50% {
-    clip: rect(.5em, .5em, 1em, 0)
-  }
-  to {
-    clip: rect(.3em, .5em, 1em, 0);
-  }
-}

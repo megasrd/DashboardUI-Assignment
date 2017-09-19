@@ -7,49 +7,57 @@
 
 <header class="topBar"> <p> GlobeTrotter </p>  </header>    
     
-<body>
+<body onload="initiate_cityData()">
     
-    <div class="container">
+    <div class="city-data">
     
-    <div class="stats-panel">
-        
-        <div class="block1 stats-block"> 
-        <p> Total Population </p>
-        <canvas class="popChart"> </canvas>
-        </div>
-        <div class="block2 stats-block"> 
-        <p> Travel Rating </p>
-        </div>
-        <div class="block3 stats-block">
-        <p> Recent Events </p>
-        </div>
-        <div class="block4 stats-block">
-        
-        </div>
-        <div class="block5 stats-block"> </div>
-        <div class="block6 stats-block">
-        
-        </div>
-        
-    </div>
-    
-    <div class="location-image"> </div>
-    
-    <div class="location-hover">
-            
-           <div class="location_name-container"> 
-                <p class="city-names" onclick="set_cityData(1)"> Cape Town </p>
-                <p class="city-names" onclick="set_cityData(2)"> Tokyo</p>
-                <p class="city-names" onclick="set_cityData(3)"> New York </p>
-                <p class="city-names" onclick="set_cityData(4)"> Munich </p>
+        <div class="container ">
+
+        <div class="stats-panel">
+
+            <div class="block1 stats-block"> 
+            <p> Total Population </p>
+            <p v-html="city_pop"> </p>
+            <canvas class="popChart"> </canvas>
             </div>
-            
+            <div class="block2 stats-block"> 
+            <p> Travel Rating </p>
+            </div>
+            <div class="block3 stats-block">
+            <p> Recent Events </p>
+            </div>
+            <div class="block4 stats-block">
+            <p v-html="city_dotw"> </p>
+            </div>
+            <div class="block5 stats-block"> 
+                <p v-html="city_weatherTemp"> </p>
+            </div>
+            <div class="block6 stats-block">
+                <p v-html="city_weatherType"> </p>
+            </div>
+
         </div>
+
+        <div class="location-image"> </div>
+
+        <div class="location-hover">
+
+               <div class="location_name-container"> 
+                    <p class="city-names" onclick="set_cityData(1)"> Cape Town </p>
+                    <p class="city-names" onclick="set_cityData(2)"> Tokyo</p>
+                    <p class="city-names" onclick="set_cityData(3)"> New York </p>
+                    <p class="city-names" onclick="set_cityData(4)"> Munich </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cityName-panel"> <p v-html="city_name" class="location-title"> </p> </div> 
         
     </div>
     
-    <div class="cityName-panel"> <p class="location-title"> {{ city_name}} </p> </div> 
-    
+      
 </body>
     
 <script src="js/vue.js"> </script>
