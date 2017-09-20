@@ -1,9 +1,19 @@
+$transition-animFade : all 0.3s ease;
+
+
 body {
   margin: 0;
 }
 
 p {
  font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.city-pop {
+    position: relative;
+    top: 11vh;
+    display: inline-block;
 }
 
 .container {
@@ -11,8 +21,20 @@ p {
   flex-wrap: wrap;
 }
 
-.popChart{
-    
+.popCanvasContainer {
+    position: absolute;
+    left: 3.5vw;
+    top: 16vh;
+    height: 12vh;
+    width: 17vw;
+}
+
+.travelCanvasContainer {
+    position: absolute;
+    left: 29vw;
+    top: 13vh;
+    height: 8vh;
+    width: 23vw;
 }
 
 .topBar {
@@ -106,53 +128,52 @@ p {
 
 .block1 {
   display: inline-block;
-  width: 40%;
+  width: 39.5%;
   height: 35%;
   float: left;
-  background-color: rgb(69, 69, 69);
 }
 
 .block2 {
   display: inline-block;
-  width: 60%;
+  width: 60.3%;
   height: 35%;
   float: left;
-  background-color: rgb(42, 42, 42);
 }
 
 .block3 {
   display: inline-block;
-  width: 50%;
+  width: 49.5%;
   height: 35%;
   float: left;
-  background-color: rgb(44, 44, 44);
 }
 
 .block4 {
   display: inline-block;
-  width: 50%;
+  width: 50.3%;
   height: 35%;
   float: left;
-  background-color: rgb(93, 93, 93);
 }
 
 .block5 {
   display: inline-block;
-  width: 33.3%;
-  height: 30%;
+  width: 33%;
+  height: 29.8%;
   float: left;
-  background-color: rgb(69, 69, 69);
 }
 
 .block6 {
   display: inline-block;
-  width: 66.7%;
-  height: 30%;
+  width: 66.8%;
+  height: 29.8%;
   float: left;
-  background-color: rgb(59, 59, 59);
+}
+
+.ui-panel-popfx {
+  transition: $transition-animFade;
 }
 
 .ui-panel-popfx:hover {
-    
+  background-color: rgba(117, 212, 117, 0.29);
+  transition: $transition-animFade;
 }
 

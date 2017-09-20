@@ -2,37 +2,47 @@
     
 <head> <title> Vue JS</title>  
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link class="cssLink" v-bind:href="url" rel="stylesheet" href="css/city1.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 <header class="topBar"> <p> GlobeTrotter </p>  </header>    
     
 <body onload="initiate_cityData()">
+
+    <div class="popCanvasContainer">    
+        <canvas id="popCanvas"> </canvas>
+    </div>
+    
+    <div class="travelCanvasContainer">    
+        <canvas id="travelCanvas"> </canvas>
+    </div>
     
     <div class="city-data">
     
         <div class="container ">
 
         <div class="stats-panel">
-
-            <div class="block1 stats-block"> 
+            
+            <div class="block1 stats-block ui-panel-popfx"> 
             <p> Total Population </p>
-            <p v-html="city_pop"> </p>
-            <canvas class="popChart"> </canvas>
+                
+            <p class="city-pop" v-html="city_pop"> </p>
+                
             </div>
-            <div class="block2 stats-block"> 
+            <div class="block2 stats-block ui-panel-popfx"> 
             <p> Travel Rating </p>
             </div>
-            <div class="block3 stats-block">
+            <div class="block3 stats-block ui-panel-popfx">
             <p> Recent Events </p>
             </div>
-            <div class="block4 stats-block">
+            <div class="block4 stats-block ui-panel-popfx">
             <p v-html="city_dotw"> </p>
             </div>
-            <div class="block5 stats-block"> 
+            <div class="block5 stats-block ui-panel-popfx"> 
                 <p v-html="city_weatherTemp"> </p>
             </div>
-            <div class="block6 stats-block">
+            <div class="block6 stats-block ui-panel-popfx">
                 <p v-html="city_weatherType"> </p>
             </div>
 
@@ -61,7 +71,7 @@
 </body>
     
 <script src="js/vue.js"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
 <script src="js/main.js"> </script>
 
 </html>

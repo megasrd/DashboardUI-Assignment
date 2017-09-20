@@ -1,11 +1,83 @@
 //Stylesheet Switch
 
+var cssTemplates = [
+  { name: 'Cape Town', value: 'css/city1.css'},
+  { name: 'Tokyo', value: 'css/city2.css'}
+];
+
+var cssSwitch = new Vue({
+    
+    el: '.cssLink',
+    
+    data: {
+        url: cssTemplates[0].value
+    },
+    
+    method: {
+        assignStyle : function assignCSS() {
+            alert(url);
+        }
+    }
+});
 
 
 
+
+
+
+//var templates = [
+//  { id: 1, name: 'Dark', value: 'css/dark.css', logo: 'css/dark.css'},
+//  { id: 2, name: 'Light', value: 'css/light.css', logo: 'css/light.css'}
+//];
 //Stylesheet Switch--End
 
 
+
+//Chart.js
+
+
+//popChart
+
+var popChart = document.getElementById("popCanvas").getContext("2d");
+
+var donutChart = new Chart( popChart , {
+  type: 'doughnut',
+  data: {
+    datasets: [{
+      backgroundColor: [
+        "#2ecc71",
+        "rgba(250, 250, 250, 0)"
+      ],
+      data: [12, 5]
+    }]
+  }
+});
+
+//popChart -- End
+
+//travelChart
+
+var travelChart = document.getElementById("travelCanvas").getContext("2d");
+
+var barChart = new Chart( travelChart, {
+  type: 'horizontalBar',
+  data: {
+    datasets: [{
+      backgroundColor: [
+        "#2ecc71",
+        "#522ecc",
+        "#cc522e",
+        "#ccae2e"
+      ],
+      data: [12, 5, 2, 7]
+    }]
+  }
+});
+
+
+//travelChart -- End
+
+//Chart.js -- End
 
 
 //City Data 
