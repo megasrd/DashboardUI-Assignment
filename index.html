@@ -51,34 +51,47 @@
 
             <div class="dataBlock db-type1 weatherData">
                 <h3> TODAY'S WEATHER </h3>
-                <div class="weather-icon"> </div>
+                <div v-bind:style="{ 'background-image': 'url(' + cityImage + ')' }" class="weather-icon"> </div>
                 <p v-html="today_temp"> Weather Temp </p>
                 <p v-html="today_type"> Weather Type </p>
             </div>
+            
             <div class="dataBlock db-type2 weatherData"> 
                 <div class="weatherCol"> 
-                    <div class="weatherCol-icon"> </div>
+                    <div v-bind:style="{ 'background-image': 'url(' + foreimg1 + ')' }" class="weatherCol-icon"> </div>
+                    
                         <p v-html="foreTemp1"> Weather Temp </p>
                         <p v-html="foreType1"> Weather Type </p>
                 </div>
+                
                 <div class="weatherCol"> 
-                    <div class="weatherCol-icon"> </div>
+                    <div v-bind:style="{ 'background-image': 'url(' + foreimg2 + ')' }" class="weatherCol-icon"> </div>
                         <p v-html="foreTemp2"> Weather Temp </p>
                         <p v-html="foreType2"> Weather Type </p>
                 </div>
+                
                 <div class="weatherCol"> 
-                    <div class="weatherCol-icon"> </div>
+                    <div v-bind:style="{ 'background-image': 'url(' + foreimg3 + ')' }" class="weatherCol-icon"> </div>
                         <p v-html="foreTemp3"> Weather Temp </p>
                         <p v-html="foreType3"> Weather Type </p>
                 </div>
+                
             </div>
+            
             <div class="dataBlock db-type3"> 
                 <div class="location-image"> 
                     <h2 v-html="city_name"> City Name </h2>
                 </div>
             </div>
-            <div class="dataBlock db-type2"> </div>
-            <div class="dataBlock db-type1"> </div>
+            
+            <div class="dataBlock db-type2"> 
+            
+            </div>
+            
+            <div class="dataBlock db-type1 cityPopData"> 
+                <h3> CITY POPULATION </h3>
+                <p v-html="city_pop">  </p>
+            </div>
         </div>
         
         <div class="user-panel">
@@ -86,7 +99,11 @@
                 <div class="user-avatar"> </div>
                 <p> User Name </p>
                 <p> User Surname</p>
+                
+                <button> Log Out </button>
+                
             </center>
+            
         </div>
 
         

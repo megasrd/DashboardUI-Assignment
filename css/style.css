@@ -21,7 +21,7 @@ h2 {
 .popCanvasContainer {
   position: absolute;
   right: 31.5vw;
-  bottom: 13vh;
+  bottom: 12vh;
   height: 15vh;
   width: 20vw; }
 
@@ -47,7 +47,7 @@ h2 {
   padding: 1vw 7vw;
   height: 85.9vh;
   width: 64vw;
-  background-color: #444;
+  background-color: #434343;
   float: left; }
 
 .user-panel {
@@ -59,19 +59,64 @@ h2 {
   -webkit-box-shadow: 1px 1px 10px black;
   box-shadow: 1px 1px 10px black; }
   .user-panel .user-avatar {
+    position: relative;
+    margin: 0px;
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    border: 1px solid white; }
+    border: 1px solid white;
+    background-image: url(../images/user-avatar-image.png);
+    background-size: cover;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .user-panel .user-avatar:hover {
+      margin: -5px 0px;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      -webkit-box-shadow: 0px 0px 10px white;
+      box-shadow: 0px 0px 10px white; }
   .user-panel p {
-    font-size: 1.5em;
-    margin: 0.5vw; }
+    font-size: 2em;
+    margin: 1vw; }
+  .user-panel button {
+    position: absolute;
+    right: 6.5vw;
+    bottom: 2vh;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .user-panel button:hover {
+      background-color: yellow;
+      color: black;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
 
 .location-image {
-  background-color: dimgrey;
   margin: 0;
   padding: 0;
-  height: 100%; }
+  height: 100%;
+  background-image: url(../images/capetown.jpg);
+  background-size: 80vw;
+  background-position: top;
+  -webkit-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease; }
+  .location-image:hover {
+    background-position: center;
+    -webkit-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease; }
   .location-image h2 {
     position: relative;
     top: 7vh;
@@ -126,7 +171,10 @@ h2 {
   overflow: hidden;
   padding: 1vw;
   margin: 5px;
-  background-color: #c9c9c9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#519bb7), to(#266776));
+  background: -webkit-linear-gradient(#519bb7, #266776);
+  background: -o-linear-gradient(#519bb7, #266776);
+  background: linear-gradient(#519bb7, #266776);
   border-radius: 5px;
   display: inline-block;
   -webkit-box-shadow: 0px 0px 20px black;
@@ -161,7 +209,7 @@ h2 {
   margin: 5px;
   width: 60%;
   height: 17vh;
-  background-image: url(../images/weather-icons/weatherIcons-01.png);
+  background-image: url();
   background-size: contain;
   background-repeat: no-repeat; }
 
@@ -185,7 +233,8 @@ h2 {
   height: 24vh;
   margin: 0px 3px;
   border-radius: 5px;
-  background-color: rgba(31, 31, 31, 0.82);
+  border: 2px solid white;
+  background-color: rgba(8, 57, 46, 0.1);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
@@ -194,7 +243,10 @@ h2 {
     height: 15vh;
     width: 100%;
     margin: 0;
-    background-color: aquamarine; }
+    background-image: url(../images/weather-icons/weatherIcons-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
   .weatherData .weatherCol p {
     float: none;
     text-align: center;
@@ -207,6 +259,19 @@ h2 {
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  background-color: rgba(7, 90, 59, 0.82);
+  background-color: #1f1f1f;
   -webkit-box-shadow: 0px 0px 20px #00eaff;
   box-shadow: 0px 0px 20px #00eaff; }
+
+.cityPopData h3 {
+  float: left;
+  margin: 0px 1px;
+  font-size: 1.3em;
+  font-family: 'Raleway', sans-serif; }
+
+.cityPopData p {
+  color: black;
+  position: absolute;
+  right: 39.8vw;
+  bottom: 5.5vw;
+  font-size: 1.6em; }

@@ -30,7 +30,7 @@ h2 {
 .popCanvasContainer {
     position: absolute;
     right: 31.5vw;
-    bottom: 13vh;
+    bottom: 12vh;
     height: 15vh;
     width: 20vw;
 }
@@ -60,11 +60,12 @@ h2 {
   padding: 1vw 7vw;
   height: 85.9vh;
   width: 64vw;
-  background-color: #444;
+  background-color: #434343;
   float: left;
 }
 
 .user-panel {
+    
   padding: 1vw;   
   float: left;
   height: 85.9vh;
@@ -74,25 +75,64 @@ h2 {
     
     
     .user-avatar {
+        position: relative;
+        margin: 0px;
         width: 200px;
         height: 200px;
         border-radius: 100px;
         border: 1px solid white;
+        background-image: url(../images/user-avatar-image.png);
+        background-size: cover;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            margin: -5px 0px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 0px 10px white;
+        }
     }
     
     p {
-        font-size: 1.5em;
-        margin: 0.5vw;
+        font-size: 2em;
+        margin: 1vw;
+    }
+    
+    button {
+        position: absolute;
+        right: 6.5vw;
+        bottom: 2vh;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.2em;
+        color: white;
+        padding: 10px;
+        width: 150px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid white;
+        transition: all 0.2s ease;
+        &:hover {
+            background-color: yellow;
+            color: black;
+            transition: all 0.2s ease;
+        }
     }
 }
 
 
 .location-image {
     
-    background-color: dimgrey;
     margin: 0;
     padding: 0;
     height: 100%;
+    background-image: url(../images/capetown.jpg);
+    background-size: 80vw;
+    background-position:top;
+    transition: all 3s ease;
+    
+    &:hover {
+        background-position:center;
+        transition: all 2s ease;
+    }
     
     h2 {
         position: relative;
@@ -205,7 +245,8 @@ h2 {
     overflow: hidden;
     padding: 1vw;
     margin: 5px;
-    background-color: #c9c9c9;
+//    background-color: #c9c9c9;
+    background: linear-gradient(#519bb7, #266776);
     border-radius: 5px;
     display: inline-block;
     box-shadow: 0px 0px 20px black;
@@ -243,7 +284,7 @@ h2 {
         margin: 5px;
         width: 60%;
         height: 17vh;
-        background-image: url(../images/weather-icons/weatherIcons-01.png);
+        background-image: url();
         background-size: contain;
         background-repeat: no-repeat;
         
@@ -271,7 +312,8 @@ h2 {
         height: 24vh;
         margin: 0px 3px;
         border-radius: 5px;
-        background-color: rgba(31, 31, 31, 0.82);
+        border: 2px solid white;
+        background-color: rgba(8, 57, 46, 0.1);
         transition: all 0.2s ease;
         
         .weatherCol-icon {
@@ -279,7 +321,10 @@ h2 {
             height: 15vh;
             width: 100%;
             margin: 0;
-            background-color: aquamarine;
+            background-image: url(../images/weather-icons/weatherIcons-01.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         
         p {
@@ -295,10 +340,28 @@ h2 {
     .weatherCol:hover {
         margin: -5px 3px;
         transition: all 0.2s ease;
-        background-color: rgba(7, 90, 59, 0.82);
+        background-color: rgb(31, 31, 31);
         box-shadow: 0px 0px 20px #00eaff;
     }
     
     
+}
+
+.cityPopData {
+    
+    h3 {
+        float: left;
+        margin: 0px 1px;
+        font-size: 1.3em;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    p {
+        color: black;
+        position: absolute;
+        right: 39.8vw;
+        bottom: 5.5vw;
+        font-size: 1.6em;
+    }
 }
 

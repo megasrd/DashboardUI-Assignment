@@ -90,20 +90,69 @@ var city1 = {
     cityName : "Cape Town, South Africa", 
     population : "3.74m", dotw : "Monday", today_weather_temp : "22", 
     today_weather_type : "Sunny",
+    today_weather_img : "../images/weather-icons/weatherIcons-01.png",
     forecast1_weather_temp : "15",
     forecast1_weather_type :"Windy",
+    forecast1_weather_image: "../images/weather-icons/weatherIcons-02.png",
     forecast2_weather_temp : "8",
     forecast2_weather_type : "Rainy",
+    forecast2_weather_image: "../images/weather-icons/weatherIcons-03.png",
     forecast3_weather_temp : "14",
     forecast3_weather_type : "Cloudy",
+    forecast3_weather_image: "../images/weather-icons/weatherIcons-04.png",
     cityImage : "../"
 };
 
-var city2 = {cityName : "Tokyo, Japan", population : "13.62m", dotw : "Tuesday", weather_temp : "10", weather_type : "Cloudy", cityImage : "../"};
+var city2 = {
+    cityName : "Tokyo, Japan", 
+    population : "13m", dotw : "Tuesday", today_weather_temp : "15", 
+    today_weather_type : "Windy",
+    today_weather_img : "../images/weather-icons/weatherIcons-02.png",
+    forecast1_weather_temp : "22",
+    forecast1_weather_type :"Sunny",
+    forecast1_weather_image: "../images/weather-icons/weatherIcons-01.png",
+    forecast2_weather_temp : "5",
+    forecast2_weather_type : "Windy",
+    forecast2_weather_image: "../images/weather-icons/weatherIcons-02.png",
+    forecast3_weather_temp : "12",
+    forecast3_weather_type : "Sunny",
+    forecast3_weather_image: "../images/weather-icons/weatherIcons-01.png",
+    cityImage : "../"
+};
 
-var city3 = {cityName : "New York, USA", population : "8.53m", dotw : "Wednesday", weather_temp : "7", weather_type : "Rainy", cityImage : "../"};
+var city3 = {
+    cityName : "New York, USA", 
+    population : "8.5m", dotw : "Wednesday", today_weather_temp : "12", 
+    today_weather_type : "Rainy",
+    today_weather_img : "../images/weather-icons/weatherIcons-03.png",
+    forecast1_weather_temp : "12",
+    forecast1_weather_type :"Windy",
+    forecast1_weather_image: "../images/weather-icons/weatherIcons-02.png",
+    forecast2_weather_temp : "5",
+    forecast2_weather_type : "Cloudy",
+    forecast2_weather_image: "../images/weather-icons/weatherIcons-04.png",
+    forecast3_weather_temp : "7",
+    forecast3_weather_type : "Rainy",
+    forecast3_weather_image: "../images/weather-icons/weatherIcons-03.png",
+    cityImage : "../"
+};
 
-var city4 = {cityName : "Munich, Germany", population : "1.37m", dotw : "Thursday", weather_temp : "9", weather_type : "Windy", cityImage : "../"};
+var city4 = {
+    cityName : "Munich, Germany", 
+    population : "1.5m", dotw : "Thursday", today_weather_temp : "25", 
+    today_weather_type : "Sunny",
+    today_weather_img : "../images/weather-icons/weatherIcons-01.png",
+    forecast1_weather_temp : "12",
+    forecast1_weather_type : "Cloudy",
+    forecast1_weather_image: "../images/weather-icons/weatherIcons-04.png",
+    forecast2_weather_temp : "7",
+    forecast2_weather_type : "Rainy",
+    forecast2_weather_image: "../images/weather-icons/weatherIcons-03.png",
+    forecast3_weather_temp : "12",
+    forecast3_weather_type : "Windy",
+    forecast3_weather_image: "../images/weather-icons/weatherIcons-02.png",
+    cityImage : "../"
+};
 
 
 function initiate_cityData() {
@@ -118,9 +167,17 @@ function initiate_cityData() {
 
               data: {
                   city_name: currentCity.cityName,
+                  cityImage: currentCity.today_weather_img,
+                  city_pop: currentCity.population,
                   
                   today_temp: currentCity.today_weather_temp,
-                  today_type: currentCity.forecast2_weather_type,
+                  today_type: currentCity.today_weather_type,
+                  today_img: currentCity.today_weather_img,
+                  
+                  foreimg1: currentCity.forecast1_weather_image,
+                  foreimg2: currentCity.forecast2_weather_image,
+                  foreimg3: currentCity.forecast3_weather_image,
+                  
                   
                   foreTemp1: currentCity.forecast1_weather_temp,
                   foreType1: currentCity.forecast1_weather_type,
@@ -133,7 +190,24 @@ function initiate_cityData() {
       }
     
     if (city_data != null) {
+        
             city_data.city_name = currentCity.cityName;
+            city_data.city_pop = currentCity.population;
+            city_data.today_img = currentCity.today_weather_img;
+            city_data.today_temp = currentCity.today_weather_temp;
+            city_data.today_type = currentCity.today_weather_type;
+        
+            city_data.foreimg1 = currentCity.forecast1_weather_image;
+            city_data.foreimg2 = currentCity.forecast2_weather_image;
+            city_data.foreimg3 = currentCity.forecast3_weather_image;
+        
+            city_data.foreTemp1 = currentCity.forecast1_weather_temp;
+            city_data.foreTemp2 = currentCity.forecast2_weather_temp;
+            city_data.foreTemp3 = currentCity.forecast3_weather_temp;
+        
+            city_data.foreType1 = currentCity.forecast1_weather_type;
+            city_data.foreType2 = currentCity.forecast2_weather_type;
+            city_data.foreType3 = currentCity.forecast3_weather_type;
     }
 }
 
