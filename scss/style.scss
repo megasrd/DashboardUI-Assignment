@@ -12,8 +12,12 @@ body {
 }
 
 p {
- font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: white;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
 }
 
 .city-pop {
@@ -25,10 +29,10 @@ p {
 
 .popCanvasContainer {
     position: absolute;
-    left: 3.5vw;
-    top: 16vh;
-    height: 12vh;
-    width: 17vw;
+    right: 37.5vw;
+    bottom: 10vh;
+    height: 15vh;
+    width: 20vw;
 }
 
 .travelCanvasContainer {
@@ -172,6 +176,7 @@ p {
 //}
 
 .dataBlock {
+    overflow: hidden;
     padding: 1vw;
     margin: 5px;
     background-color: #c9c9c9;
@@ -209,9 +214,11 @@ p {
     .weather-icon {
         float: right;
         margin: 5px;
-        width: 70%;
+        width: 60%;
         height: 17vh;
-        background-color: aqua;
+        background-image: url(../images/weather-icons/weatherIcons-01.png);
+        background-size: contain;
+        background-repeat: no-repeat;
         
     }
     
@@ -219,13 +226,14 @@ p {
         float: left;
         margin: 0px 5px;
         font-size: 1.3em;
-        font-family: sans-serif;
+        font-family: 'Raleway', sans-serif;
     }
     
     p {
         display: inline;
         float: right;
         margin: 0px 5px;
+        font-family: 'Raleway', sans-serif;
     }
     
     .weatherCol {
@@ -252,6 +260,7 @@ p {
             text-align: center;
             display: block;
             margin: 7px 5px;
+            font-family: 'Raleway', sans-serif;
         }
         
     }

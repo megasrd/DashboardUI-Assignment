@@ -38,20 +38,20 @@
 
 //popChart
 
-//var popChart = document.getElementById("popCanvas").getContext("2d");
-//
-//var donutChart = new Chart( popChart , {
-//  type: 'doughnut',
-//  data: {
-//    datasets: [{
-//      backgroundColor: [
-//        "#2ecc71",
-//        "rgba(250, 250, 250, 0)"
-//      ],
-//      data: [12, 5]
-//    }]
-//  }
-//});
+var popChart = document.getElementById("popCanvas").getContext("2d");
+
+var donutChart = new Chart( popChart , {
+  type: 'doughnut',
+  data: {
+    datasets: [{
+      backgroundColor: [
+        "#2ecc71",
+        "rgba(250, 250, 250, 0)"
+      ],
+      data: [12, 5]
+    }]
+  }
+});
 
 //popChart -- End
 
