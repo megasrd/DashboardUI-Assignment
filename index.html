@@ -14,16 +14,18 @@
         <canvas id="popCanvas"> </canvas>
     </div>
     
+<!--
     <div class="travelCanvasContainer">    
         <canvas id="travelCanvas"> </canvas>
     </div>
+-->
     
-    <div class="city-data">
-    
-        <div class="container ">
+    <div class="vue-dataContainer">
 
         <div class="stats-panel">
             
+
+<!--
             <div class="block1 stats-block ui-panel-popfx"> 
             <p> Total Population </p>
                 
@@ -45,10 +47,39 @@
             <div class="block6 stats-block ui-panel-popfx">
                 <p v-html="city_weatherType"> </p>
             </div>
+-->
 
+            <div class="dataBlock db-type1 weatherData">
+                <h3> TODAY'S WEATHER </h3>
+                <div class="weather-icon"> </div>
+                <p v-html="today_temp"> Weather Temp </p>
+                <p v-html="today_type"> Weather Type </p>
+            </div>
+            <div class="dataBlock db-type2 weatherData"> 
+                <div class="weatherCol"> 
+                    <div class="weatherCol-icon"> </div>
+                        <p v-html="foreTemp1"> Weather Temp </p>
+                        <p v-html="foreType1"> Weather Type </p>
+                </div>
+                <div class="weatherCol"> 
+                    <div class="weatherCol-icon"> </div>
+                        <p v-html="foreTemp2"> Weather Temp </p>
+                        <p v-html="foreType2"> Weather Type </p>
+                </div>
+                <div class="weatherCol"> 
+                    <div class="weatherCol-icon"> </div>
+                        <p v-html="foreTemp3"> Weather Temp </p>
+                        <p v-html="foreType3"> Weather Type </p>
+                </div>
+            </div>
+            <div class="dataBlock db-type3"> </div>
+            <div class="dataBlock db-type2"> </div>
+            <div class="dataBlock db-type1"> </div>
         </div>
 
-        <div class="location-image"> </div>
+        <div class="location-image"> 
+            <h2 v-html="city_name"> City Name </h2>
+        </div>
 
         <div class="location-hover">
 
@@ -60,18 +91,12 @@
                 </div>
 
             </div>
-
-        </div>
-
-        <div class="cityName-panel"> <p v-html="city_name" class="location-title"> </p> </div> 
-        
-    </div>
     
-      
+        </div>
 </body>
     
 <script src="js/vue.js"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+<!--<script src="../Chart.JS%2520(Use%2520THIS!!!!)/Chart.bundle.js"></script>-->
 <script src="js/main.js"> </script>
 
 </html>

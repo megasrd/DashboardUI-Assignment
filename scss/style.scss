@@ -5,6 +5,12 @@ body {
   margin: 0;
 }
 
+.clearfix:after {
+    overflow: auto;
+    content: "";
+    clear: both;
+}
+
 p {
  font-family: 'Raleway', sans-serif;
     color: white;
@@ -16,10 +22,6 @@ p {
     display: inline-block;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .popCanvasContainer {
     position: absolute;
@@ -51,54 +53,55 @@ p {
 }
 
 .stats-panel {
-  display: flex;
-  flex-wrap: wrap;
-  height: 80vh;
-  width: 60vw;
+  padding: 1vw;
+  height: 85.9vh;
+  width: 62vw;
   background-color: #444;
+  float: left;
 }
 
 .location-image {
-  height: 80vh;
-  width: 38.5vw;
-  display: inline-block;
+  padding: 1vw;
+  height: 85.9vh;
+  width: 32.7vw;
   background-color: #222;
-  margin: 0;
-}
-
-.cityName-panel {
-  background-color: #252634;
-  border-top: 1px solid yellow;
-  margin: 0;
+  float: left;
+    
+    h2 {
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-size: 3em;
+    }
 }
 
 
 .location-hover {
-  bottom: 40vh;
-  left: -7em;
   position: absolute;
+  bottom: 40vh;
+  right: -7em;
   width: 150px;
   height: 180px;
   background-color: #991e1e;
   transition: all 0.5s ease;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: right;
 }
 
 .location_name-container {}
 
 .location-hover {
   p {
-    width: 70%;
+    width: 90%;
     padding: 3px 0px;
-    text-align: center;
     color: white;
     font-family: 'Raleway', sans-serif;
     transition: all 0.2s ease;
     cursor: pointer;
   }
   &:hover {
-    left: 0em;
+    right: 0em;
   }
   .city-names:hover {
     font-size: 1.1em;
@@ -108,16 +111,8 @@ p {
   }
 }
 
-.location-title {
-  text-align: center;
-  margin: 0;
-  font-size: 4em;
-  padding: 10px;
-  font-family: 'Raleway', sans-serif;
-  color: #ffffff;
-}
-
 .stats-block {
+    
     p {
         text-align: center;
         display: block;
@@ -126,46 +121,78 @@ p {
     }
 }
 
-.block1 {
-  display: inline-block;
-  width: 39.5%;
-  height: 35%;
-  float: left;
+
+
+//.block1 {
+//  display: inline-block;
+////  width: 39.5%;
+//  width: 20vw;
+//  height: 35%;
+//  float: left;
+//}
+//
+//.block2 {
+//  display: inline-block;
+////  width: 60.3%;
+//  width: 39.6vw;
+//  height: 35%;
+//  float: left;
+//}
+//
+//.block3 {
+//  display: inline-block;
+////  width: 49.5%;
+//  width: 55vw;
+//  height: 34%;
+//  float: left;
+//}
+//
+//.block4 {
+//  display: inline-block;
+////  width: 50.3%;
+//  width: 29.6vw;
+//  height: 34%;
+//  float: left;
+//}
+//
+//.block5 {
+//  display: inline-block;
+////  width: 33%;
+//  width: 20vw;
+//  height: 29.8%;
+//  float: left;
+//}
+//
+//.block6 {
+//  display: inline-block;
+////  width: 66.8%;
+//   width: 39.5vw;
+//  height: 29.8%;
+//  float: left;
+//}
+
+.dataBlock {
+    padding: 1vw;
+    margin: 5px;
+    background-color: #c9c9c9;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0px 0px 20px black;
 }
 
-.block2 {
-  display: inline-block;
-  width: 60.3%;
-  height: 35%;
-  float: left;
+.db-type1 {
+    width: 18vw;
+    height: 24vh;
 }
 
-.block3 {
-  display: inline-block;
-  width: 49.5%;
-  height: 35%;
-  float: left;
+.db-type2 {
+    width: 38vw;
+    height: 24vh;
 }
 
-.block4 {
-  display: inline-block;
-  width: 50.3%;
-  height: 35%;
-  float: left;
-}
-
-.block5 {
-  display: inline-block;
-  width: 33%;
-  height: 29.8%;
-  float: left;
-}
-
-.block6 {
-  display: inline-block;
-  width: 66.8%;
-  height: 29.8%;
-  float: left;
+.db-type3 {
+    width: 59vw;
+    height: 22vh;
 }
 
 .ui-panel-popfx {
@@ -175,5 +202,67 @@ p {
 .ui-panel-popfx:hover {
   background-color: rgba(117, 212, 117, 0.29);
   transition: $transition-animFade;
+}
+
+.weatherData {
+    
+    .weather-icon {
+        float: right;
+        margin: 5px;
+        width: 70%;
+        height: 17vh;
+        background-color: aqua;
+        
+    }
+    
+    h3 {
+        float: left;
+        margin: 0px 5px;
+        font-size: 1.3em;
+        font-family: sans-serif;
+    }
+    
+    p {
+        display: inline;
+        float: right;
+        margin: 0px 5px;
+    }
+    
+    .weatherCol {
+        position: relative;
+        float: left;
+        display: inline-block;
+        width: 12vw;
+        height: 24vh;
+        margin: 0px 3px;
+        border-radius: 5px;
+        background-color: rgba(31, 31, 31, 0.82);
+        transition: all 0.2s ease;
+        
+        .weatherCol-icon {
+            display: inline-block;
+            height: 15vh;
+            width: 100%;
+            margin: 0;
+            background-color: aquamarine;
+        }
+        
+        p {
+            float: none;
+            text-align: center;
+            display: block;
+            margin: 7px 5px;
+        }
+        
+    }
+    
+    .weatherCol:hover {
+        margin: -5px 3px;
+        transition: all 0.2s ease;
+        background-color: rgba(7, 90, 59, 0.82);
+        box-shadow: 0px 0px 20px #00eaff;
+    }
+    
+    
 }
 

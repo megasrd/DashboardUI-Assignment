@@ -1,6 +1,11 @@
 body {
   margin: 0; }
 
+.clearfix:after {
+  overflow: auto;
+  content: "";
+  clear: both; }
+
 p {
   font-family: 'Raleway', sans-serif;
   color: white; }
@@ -9,15 +14,6 @@ p {
   position: relative;
   top: 11vh;
   display: inline-block; }
-
-.container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
 
 .popCanvasContainer {
   position: absolute;
@@ -45,46 +41,41 @@ p {
     font-family: 'Raleway', sans-serif; }
 
 .stats-panel {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  height: 80vh;
-  width: 60vw;
-  background-color: #444; }
+  padding: 1vw;
+  height: 85.9vh;
+  width: 62vw;
+  background-color: #444;
+  float: left; }
 
 .location-image {
-  height: 80vh;
-  width: 38.5vw;
-  display: inline-block;
+  padding: 1vw;
+  height: 85.9vh;
+  width: 32.7vw;
   background-color: #222;
-  margin: 0; }
-
-.cityName-panel {
-  background-color: #252634;
-  border-top: 1px solid yellow;
-  margin: 0; }
+  float: left; }
+  .location-image h2 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 3em; }
 
 .location-hover {
-  bottom: 40vh;
-  left: -7em;
   position: absolute;
+  bottom: 40vh;
+  right: -7em;
   width: 150px;
   height: 180px;
   background-color: #991e1e;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px; }
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: right; }
 
 .location-hover p {
-  width: 70%;
+  width: 90%;
   padding: 3px 0px;
-  text-align: center;
   color: white;
   font-family: 'Raleway', sans-serif;
   -webkit-transition: all 0.2s ease;
@@ -93,7 +84,7 @@ p {
   cursor: pointer; }
 
 .location-hover:hover {
-  left: 0em; }
+  right: 0em; }
 
 .location-hover .city-names:hover {
   font-size: 1.1em;
@@ -103,55 +94,32 @@ p {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
-.location-title {
-  text-align: center;
-  margin: 0;
-  font-size: 4em;
-  padding: 10px;
-  font-family: 'Raleway', sans-serif;
-  color: #ffffff; }
-
 .stats-block p {
   text-align: center;
   display: block;
   font-size: 1.2em;
   margin: 5px 0px; }
 
-.block1 {
+.dataBlock {
+  padding: 1vw;
+  margin: 5px;
+  background-color: #c9c9c9;
+  border-radius: 5px;
   display: inline-block;
-  width: 39.5%;
-  height: 35%;
-  float: left; }
+  -webkit-box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 20px black; }
 
-.block2 {
-  display: inline-block;
-  width: 60.3%;
-  height: 35%;
-  float: left; }
+.db-type1 {
+  width: 18vw;
+  height: 24vh; }
 
-.block3 {
-  display: inline-block;
-  width: 49.5%;
-  height: 35%;
-  float: left; }
+.db-type2 {
+  width: 38vw;
+  height: 24vh; }
 
-.block4 {
-  display: inline-block;
-  width: 50.3%;
-  height: 35%;
-  float: left; }
-
-.block5 {
-  display: inline-block;
-  width: 33%;
-  height: 29.8%;
-  float: left; }
-
-.block6 {
-  display: inline-block;
-  width: 66.8%;
-  height: 29.8%;
-  float: left; }
+.db-type3 {
+  width: 59vw;
+  height: 22vh; }
 
 .ui-panel-popfx {
   -webkit-transition: all 0.3s ease;
@@ -163,3 +131,54 @@ p {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
+
+.weatherData .weather-icon {
+  float: right;
+  margin: 5px;
+  width: 70%;
+  height: 17vh;
+  background-color: aqua; }
+
+.weatherData h3 {
+  float: left;
+  margin: 0px 5px;
+  font-size: 1.3em;
+  font-family: sans-serif; }
+
+.weatherData p {
+  display: inline;
+  float: right;
+  margin: 0px 5px; }
+
+.weatherData .weatherCol {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 12vw;
+  height: 24vh;
+  margin: 0px 3px;
+  border-radius: 5px;
+  background-color: rgba(31, 31, 31, 0.82);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .weatherData .weatherCol .weatherCol-icon {
+    display: inline-block;
+    height: 15vh;
+    width: 100%;
+    margin: 0;
+    background-color: aquamarine; }
+  .weatherData .weatherCol p {
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 7px 5px; }
+
+.weatherData .weatherCol:hover {
+  margin: -5px 3px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: rgba(7, 90, 59, 0.82);
+  -webkit-box-shadow: 0px 0px 20px #00eaff;
+  box-shadow: 0px 0px 20px #00eaff; }

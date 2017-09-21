@@ -1,24 +1,24 @@
 //Stylesheet Switch
 
-var cssTemplates = [
-  { name: 'Cape Town', value: 'css/city1.css'},
-  { name: 'Tokyo', value: 'css/city2.css'}
-];
-
-var cssSwitch = new Vue({
-    
-    el: '.cssLink',
-    
-    data: {
-        url: cssTemplates[0].value
-    },
-    
-    method: {
-        assignStyle : function assignCSS() {
-            alert(url);
-        }
-    }
-});
+//var cssTemplates = [
+//  { name: 'Cape Town', value: 'css/city1.css'},
+//  { name: 'Tokyo', value: 'css/city2.css'}
+//];
+//
+//var cssSwitch = new Vue({
+//    
+//    el: '.cssLink',
+//    
+//    data: {
+//        url: cssTemplates[0].value
+//    },
+//    
+//    method: {
+//        assignStyle : function assignCSS() {
+//            alert(url);
+//        }
+//    }
+//});
 
 
 
@@ -38,41 +38,41 @@ var cssSwitch = new Vue({
 
 //popChart
 
-var popChart = document.getElementById("popCanvas").getContext("2d");
-
-var donutChart = new Chart( popChart , {
-  type: 'doughnut',
-  data: {
-    datasets: [{
-      backgroundColor: [
-        "#2ecc71",
-        "rgba(250, 250, 250, 0)"
-      ],
-      data: [12, 5]
-    }]
-  }
-});
+//var popChart = document.getElementById("popCanvas").getContext("2d");
+//
+//var donutChart = new Chart( popChart , {
+//  type: 'doughnut',
+//  data: {
+//    datasets: [{
+//      backgroundColor: [
+//        "#2ecc71",
+//        "rgba(250, 250, 250, 0)"
+//      ],
+//      data: [12, 5]
+//    }]
+//  }
+//});
 
 //popChart -- End
 
 //travelChart
 
-var travelChart = document.getElementById("travelCanvas").getContext("2d");
-
-var barChart = new Chart( travelChart, {
-  type: 'horizontalBar',
-  data: {
-    datasets: [{
-      backgroundColor: [
-        "#2ecc71",
-        "#522ecc",
-        "#cc522e",
-        "#ccae2e"
-      ],
-      data: [12, 5, 2, 7]
-    }]
-  }
-});
+//var travelChart = document.getElementById("travelCanvas").getContext("2d");
+//
+//var barChart = new Chart( travelChart, {
+//  type: 'horizontalBar',
+//  data: {
+//    datasets: [{
+//      backgroundColor: [
+//        "#2ecc71",
+//        "#522ecc",
+//        "#cc522e",
+//        "#ccae2e"
+//      ],
+//      data: [12, 5, 2, 7]
+//    }]
+//  }
+//});
 
 
 //travelChart -- End
@@ -86,7 +86,18 @@ var currentCity;
 
 var city_data;
 
-var city1 = {cityName : "Cape Town, South Africa", population : "3.74m", dotw : "Monday", weather_temp : "22", weather_type : "Sunny", cityImage : "../"};
+var city1 = {
+    cityName : "Cape Town, South Africa", 
+    population : "3.74m", dotw : "Monday", today_weather_temp : "22", 
+    today_weather_type : "Sunny",
+    forecast1_weather_temp : "15",
+    forecast1_weather_type :"Windy",
+    forecast2_weather_temp : "8",
+    forecast2_weather_type : "Rainy",
+    forecast3_weather_temp : "14",
+    forecast3_weather_type : "Cloudy",
+    cityImage : "../"
+};
 
 var city2 = {cityName : "Tokyo, Japan", population : "13.62m", dotw : "Tuesday", weather_temp : "10", weather_type : "Cloudy", cityImage : "../"};
 
@@ -103,24 +114,26 @@ function initiate_cityData() {
           
           city_data = new Vue({
     
-              el: '.city-data',
+              el: '.vue-dataContainer',
 
               data: {
                   city_name: currentCity.cityName,
-                  city_pop: currentCity.population,
-                  city_dotw: currentCity.dotw,
-                  city_weatherTemp: currentCity.weather_temp,
-                  city_weatherType: currentCity.weather_type
+                  
+                  today_temp: currentCity.today_weather_temp,
+                  today_type: currentCity.forecast2_weather_type,
+                  
+                  foreTemp1: currentCity.forecast1_weather_temp,
+                  foreType1: currentCity.forecast1_weather_type,
+                  foreTemp2: currentCity.forecast2_weather_temp,
+                  foreType2: currentCity.forecast2_weather_type,
+                  foreTemp3: currentCity.forecast3_weather_temp,
+                  foreType3: currentCity.forecast3_weather_type
               }
           });
       }
     
     if (city_data != null) {
             city_data.city_name = currentCity.cityName;
-            city_data.city_pop = currentCity.population;
-            city_data.city_dotw = currentCity.dotw;
-            city_data.city_weatherTemp = currentCity.weather_temp;
-            city_data.city_weatherType = currentCity.weather_type;
     }
 }
 
