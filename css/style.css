@@ -20,8 +20,8 @@ h2 {
 
 .popCanvasContainer {
   position: absolute;
-  right: 37.5vw;
-  bottom: 10vh;
+  right: 31.5vw;
+  bottom: 13vh;
   height: 15vh;
   width: 20vw; }
 
@@ -44,37 +44,56 @@ h2 {
     font-family: 'Raleway', sans-serif; }
 
 .stats-panel {
-  padding: 1vw;
+  padding: 1vw 7vw;
   height: 85.9vh;
-  width: 62vw;
+  width: 64vw;
   background-color: #444;
   float: left; }
 
-.location-image {
+.user-panel {
   padding: 1vw;
+  float: left;
   height: 85.9vh;
-  width: 32.7vw;
-  background-color: #222;
-  float: left; }
+  width: 19.2vw;
+  background-color: #152234;
+  -webkit-box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 10px black; }
+  .user-panel .user-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 1px solid white; }
+  .user-panel p {
+    font-size: 1.5em;
+    margin: 0.5vw; }
+
+.location-image {
+  background-color: dimgrey;
+  margin: 0;
+  padding: 0;
+  height: 100%; }
   .location-image h2 {
+    position: relative;
+    top: 7vh;
     margin: 0;
     text-align: center;
     color: white;
-    font-size: 3em; }
+    font-size: 4em; }
 
 .location-hover {
   position: absolute;
   bottom: 40vh;
-  right: -7em;
+  left: -7em;
   width: 150px;
-  height: 180px;
+  height: 20vh;
+  padding: 0.1vw;
   background-color: #991e1e;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  text-align: right; }
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: left; }
 
 .location-hover p {
   width: 90%;
@@ -87,7 +106,7 @@ h2 {
   cursor: pointer; }
 
 .location-hover:hover {
-  right: 0em; }
+  left: 0em; }
 
 .location-hover .city-names:hover {
   font-size: 1.1em;
@@ -122,8 +141,9 @@ h2 {
   height: 24vh; }
 
 .db-type3 {
-  width: 59vw;
-  height: 22vh; }
+  padding: 0;
+  width: 60.7vw;
+  height: 25vh; }
 
 .ui-panel-popfx {
   -webkit-transition: all 0.3s ease;

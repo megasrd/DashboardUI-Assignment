@@ -72,14 +72,24 @@
                         <p v-html="foreType3"> Weather Type </p>
                 </div>
             </div>
-            <div class="dataBlock db-type3"> </div>
+            <div class="dataBlock db-type3"> 
+                <div class="location-image"> 
+                    <h2 v-html="city_name"> City Name </h2>
+                </div>
+            </div>
             <div class="dataBlock db-type2"> </div>
             <div class="dataBlock db-type1"> </div>
         </div>
-
-        <div class="location-image"> 
-            <h2 v-html="city_name"> City Name </h2>
+        
+        <div class="user-panel">
+            <center>
+                <div class="user-avatar"> </div>
+                <p> User Name </p>
+                <p> User Surname</p>
+            </center>
         </div>
+
+        
 
         <div class="location-hover">
 
