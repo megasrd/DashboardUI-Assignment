@@ -231,7 +231,7 @@ h2 {
   height: 17vh;
   background-size: contain;
   background-repeat: no-repeat; 
-  background-image:url();}
+  background-image: url();}
 
 .weatherData h3 {
   float: left;

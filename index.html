@@ -1,12 +1,14 @@
 <html>
     
 <head> <title> Vue JS</title>  
+    
     <link rel="stylesheet" href="css/style.css" type="text/css">
     
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    
 </head>
 
-<header class="topBar"> <p> GlobeTrotter </p>  </header>    
+<header class="topBar"> <p> Globe Trotter </p>  </header>    
     
 <body onload="initiate_cityData()">
     
@@ -38,18 +40,23 @@
                     
                         <p v-html="foreTemp1"> Weather Temp </p>
                         <p v-html="foreType1"> Weather Type </p>
+                    
                 </div>
                 
                 <div class="weatherCol"> 
                     <div v-bind:style="{ 'background-image': 'url(' + foreimg2 + ')' }" class="weatherCol-icon"> </div>
+                    
                         <p v-html="foreTemp2"> Weather Temp </p>
                         <p v-html="foreType2"> Weather Type </p>
+                    
                 </div>
                 
                 <div class="weatherCol"> 
                     <div v-bind:style="{ 'background-image': 'url(' + foreimg3 + ')' }" class="weatherCol-icon"> </div>
+                    
                         <p v-html="foreTemp3"> Weather Temp </p>
                         <p v-html="foreType3"> Weather Type </p>
+                     
                 </div>
                 
             </div>
@@ -98,7 +105,7 @@
         </div>
 </body>
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
 <script src="js/main.js"> </script>
 
