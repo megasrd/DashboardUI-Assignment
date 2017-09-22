@@ -1,5 +1,6 @@
-$transition-animFade : all 0.3s ease;
+@import 'city1';
 
+//background: linear-gradient(#519bb7, #266776);
 
 body {
   margin: 0;
@@ -21,6 +22,7 @@ h2 {
 }
 
 .city-pop {
+    
     position: relative;
     top: 11vh;
     display: inline-block;
@@ -28,6 +30,7 @@ h2 {
 
 
 .popCanvasContainer {
+    
     position: absolute;
     right: 31.5vw;
     bottom: 12vh;
@@ -36,17 +39,19 @@ h2 {
 }
 
 .travelCanvasContainer {
+    
     position: absolute;
-    left: 29vw;
-    top: 13vh;
+    left: 18vw;
+    bottom: 21vh;
     height: 8vh;
     width: 23vw;
 }
 
 .topBar {
+    
   height: 10vh;
-  background-color: #252634;
-  border-bottom: 1px solid yellow;
+  
+    
   p {
     text-align: center;
     padding-top: 15px;
@@ -57,11 +62,12 @@ h2 {
 }
 
 .stats-panel {
+    
   padding: 1vw 7vw;
   height: 85.9vh;
   width: 64vw;
-  background-color: #434343;
   float: left;
+    
 }
 
 .user-panel {
@@ -70,8 +76,7 @@ h2 {
   float: left;
   height: 85.9vh;
   width: 19.2vw;
-  background-color: #152234;
-  box-shadow: 1px 1px 10px black;
+  
     
     
     .user-avatar {
@@ -124,7 +129,7 @@ h2 {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url(../images/capetown.jpg);
+    background-image: url();
     background-size: 80vw;
     background-position:top;
     transition: all 3s ease;
@@ -191,62 +196,11 @@ h2 {
     }
 }
 
-
-
-//.block1 {
-//  display: inline-block;
-////  width: 39.5%;
-//  width: 20vw;
-//  height: 35%;
-//  float: left;
-//}
-//
-//.block2 {
-//  display: inline-block;
-////  width: 60.3%;
-//  width: 39.6vw;
-//  height: 35%;
-//  float: left;
-//}
-//
-//.block3 {
-//  display: inline-block;
-////  width: 49.5%;
-//  width: 55vw;
-//  height: 34%;
-//  float: left;
-//}
-//
-//.block4 {
-//  display: inline-block;
-////  width: 50.3%;
-//  width: 29.6vw;
-//  height: 34%;
-//  float: left;
-//}
-//
-//.block5 {
-//  display: inline-block;
-////  width: 33%;
-//  width: 20vw;
-//  height: 29.8%;
-//  float: left;
-//}
-//
-//.block6 {
-//  display: inline-block;
-////  width: 66.8%;
-//   width: 39.5vw;
-//  height: 29.8%;
-//  float: left;
-//}
-
 .dataBlock {
     overflow: hidden;
     padding: 1vw;
     margin: 5px;
 //    background-color: #c9c9c9;
-    background: linear-gradient(#519bb7, #266776);
     border-radius: 5px;
     display: inline-block;
     box-shadow: 0px 0px 20px black;
@@ -269,12 +223,11 @@ h2 {
 }
 
 .ui-panel-popfx {
-  transition: $transition-animFade;
+  
 }
 
 .ui-panel-popfx:hover {
   background-color: rgba(117, 212, 117, 0.29);
-  transition: $transition-animFade;
 }
 
 .weatherData {
@@ -284,7 +237,6 @@ h2 {
         margin: 5px;
         width: 60%;
         height: 17vh;
-        background-image: url();
         background-size: contain;
         background-repeat: no-repeat;
         
@@ -310,7 +262,7 @@ h2 {
         display: inline-block;
         width: 12vw;
         height: 24vh;
-        margin: 0px 3px;
+        margin: 0vw 0.1vw;
         border-radius: 5px;
         border: 2px solid white;
         background-color: rgba(8, 57, 46, 0.1);
@@ -321,7 +273,7 @@ h2 {
             height: 15vh;
             width: 100%;
             margin: 0;
-            background-image: url(../images/weather-icons/weatherIcons-01.png);
+            background-image: url("../images/weather-icons/weatherIcons01.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -340,8 +292,6 @@ h2 {
     .weatherCol:hover {
         margin: -5px 3px;
         transition: all 0.2s ease;
-        background-color: rgb(31, 31, 31);
-        box-shadow: 0px 0px 20px #00eaff;
     }
     
     
@@ -357,7 +307,6 @@ h2 {
     }
     
     p {
-        color: black;
         position: absolute;
         right: 39.8vw;
         bottom: 5.5vw;
@@ -365,3 +314,14 @@ h2 {
     }
 }
 
+.waterLevelData {
+    
+    h3 {
+        
+        float: left;
+        margin: 0px 1px;
+        font-size: 1.3em;
+        font-family: 'Raleway', sans-serif;
+        
+    }
+}

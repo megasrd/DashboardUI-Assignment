@@ -1,3 +1,41 @@
+.topBar {
+  background-color: #252634;
+  border-bottom: 1px solid yellow; }
+
+.user-panel {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1f3867), to(#04112c));
+  background: -webkit-linear-gradient(#1f3867, #04112c);
+  background: -o-linear-gradient(#1f3867, #04112c);
+  background: linear-gradient(#1f3867, #04112c);
+  -webkit-box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 10px black; }
+
+.stats-panel {
+  background: -webkit-gradient(linear, left top, left bottom, from(#326071), to(#27334d));
+  background: -webkit-linear-gradient(#326071, #27334d);
+  background: -o-linear-gradient(#326071, #27334d);
+  background: linear-gradient(#326071, #27334d); }
+
+.dataBlock {
+  background: #152234; }
+  .dataBlock h3 {
+    color: #ffffff; }
+  .dataBlock p {
+    color: #ffffff; }
+
+.weatherData .weather-icon {
+  -webkit-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease; }
+
+.weatherData .weatherCol {
+  background-color: rgba(8, 57, 46, 0.3); }
+
+.weatherData .weatherCol:hover {
+  background-color: #24938f;
+  -webkit-box-shadow: 0px 0px 20px #00eaff;
+  box-shadow: 0px 0px 20px #00eaff; }
+
 body {
   margin: 0; }
 
@@ -27,15 +65,13 @@ h2 {
 
 .travelCanvasContainer {
   position: absolute;
-  left: 29vw;
-  top: 13vh;
+  left: 18vw;
+  bottom: 21vh;
   height: 8vh;
   width: 23vw; }
 
 .topBar {
-  height: 10vh;
-  background-color: #252634;
-  border-bottom: 1px solid yellow; }
+  height: 10vh; }
   .topBar p {
     text-align: center;
     padding-top: 15px;
@@ -47,17 +83,13 @@ h2 {
   padding: 1vw 7vw;
   height: 85.9vh;
   width: 64vw;
-  background-color: #434343;
   float: left; }
 
 .user-panel {
   padding: 1vw;
   float: left;
   height: 85.9vh;
-  width: 19.2vw;
-  background-color: #152234;
-  -webkit-box-shadow: 1px 1px 10px black;
-  box-shadow: 1px 1px 10px black; }
+  width: 19.2vw; }
   .user-panel .user-avatar {
     position: relative;
     margin: 0px;
@@ -106,7 +138,7 @@ h2 {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-image: url(../images/capetown.jpg);
+  background-image: url();
   background-size: 80vw;
   background-position: top;
   -webkit-transition: all 3s ease;
@@ -171,10 +203,6 @@ h2 {
   overflow: hidden;
   padding: 1vw;
   margin: 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#519bb7), to(#266776));
-  background: -webkit-linear-gradient(#519bb7, #266776);
-  background: -o-linear-gradient(#519bb7, #266776);
-  background: linear-gradient(#519bb7, #266776);
   border-radius: 5px;
   display: inline-block;
   -webkit-box-shadow: 0px 0px 20px black;
@@ -193,23 +221,14 @@ h2 {
   width: 60.7vw;
   height: 25vh; }
 
-.ui-panel-popfx {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-
 .ui-panel-popfx:hover {
-  background-color: rgba(117, 212, 117, 0.29);
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  background-color: rgba(117, 212, 117, 0.29); }
 
 .weatherData .weather-icon {
   float: right;
   margin: 5px;
   width: 60%;
   height: 17vh;
-  background-image: url();
   background-size: contain;
   background-repeat: no-repeat; }
 
@@ -231,7 +250,7 @@ h2 {
   display: inline-block;
   width: 12vw;
   height: 24vh;
-  margin: 0px 3px;
+  margin: 0vw 0.1vw;
   border-radius: 5px;
   border: 2px solid white;
   background-color: rgba(8, 57, 46, 0.1);
@@ -243,7 +262,7 @@ h2 {
     height: 15vh;
     width: 100%;
     margin: 0;
-    background-image: url(../images/weather-icons/weatherIcons-01.png);
+    background-image: url("../images/weather-icons/weatherIcons01.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -258,10 +277,7 @@ h2 {
   margin: -5px 3px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  background-color: #1f1f1f;
-  -webkit-box-shadow: 0px 0px 20px #00eaff;
-  box-shadow: 0px 0px 20px #00eaff; }
+  transition: all 0.2s ease; }
 
 .cityPopData h3 {
   float: left;
@@ -270,8 +286,13 @@ h2 {
   font-family: 'Raleway', sans-serif; }
 
 .cityPopData p {
-  color: black;
   position: absolute;
   right: 39.8vw;
   bottom: 5.5vw;
   font-size: 1.6em; }
+
+.waterLevelData h3 {
+  float: left;
+  margin: 0px 1px;
+  font-size: 1.3em;
+  font-family: 'Raleway', sans-serif; }

@@ -2,7 +2,7 @@
     
 <head> <title> Vue JS</title>  
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link class="cssLink" v-bind:href="url" rel="stylesheet" href="css/city1.css" type="text/css">
+    
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
@@ -10,18 +10,19 @@
     
 <body onload="initiate_cityData()">
 
-    <div class="popCanvasContainer">    
-        <canvas id="popCanvas"> </canvas>
-    </div>
-    
-<!--
-    <div class="travelCanvasContainer">    
-        <canvas id="travelCanvas"> </canvas>
-    </div>
--->
-    
     <div class="vue-dataContainer">
+    
+        <link v-bind:href="cssURL" rel="stylesheet" href="css/city2.css">
+        
+        <div class="popCanvasContainer">    
+            <canvas id="popCanvas"> </canvas>
+        </div>
 
+        <div class="travelCanvasContainer">    
+            <canvas id="travelCanvas"> </canvas>
+        </div>
+
+    
         <div class="stats-panel">
             
 
@@ -51,7 +52,7 @@
 
             <div class="dataBlock db-type1 weatherData">
                 <h3> TODAY'S WEATHER </h3>
-                <div v-bind:style="{ 'background-image': 'url(' + cityImage + ')' }" class="weather-icon"> </div>
+                <div v-bind:style="{ 'background-image': 'url(' + city_today_image + ')' }" class="weather-icon"> </div>
                 <p v-html="today_temp"> Weather Temp </p>
                 <p v-html="today_type"> Weather Type </p>
             </div>
@@ -79,13 +80,13 @@
             </div>
             
             <div class="dataBlock db-type3"> 
-                <div class="location-image"> 
+                <div v-bind:style="{ 'background-image': 'url(' + cityImage + ')' }" class="location-image"> 
                     <h2 v-html="city_name"> City Name </h2>
                 </div>
             </div>
             
-            <div class="dataBlock db-type2"> 
-            
+            <div class="dataBlock db-type2 waterLevelData"> 
+            <h3> Water Levels </h3>
             </div>
             
             <div class="dataBlock db-type1 cityPopData"> 
@@ -122,7 +123,7 @@
         </div>
 </body>
     
-<script src="js/vue.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
 <script src="js/main.js"> </script>
 
