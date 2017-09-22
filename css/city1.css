@@ -1,2 +1,37 @@
+.topBar {
+  background-color: #252634;
+  border-bottom: 1px solid yellow; }
+
+.user-panel {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1f3867), to(#04112c));
+  background: -webkit-linear-gradient(#1f3867, #04112c);
+  background: -o-linear-gradient(#1f3867, #04112c);
+  background: linear-gradient(#1f3867, #04112c);
+  -webkit-box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 10px black; }
+
 .stats-panel {
-  background-color: #636558; }
+  background: -webkit-gradient(linear, left top, left bottom, from(#326071), to(#27334d));
+  background: -webkit-linear-gradient(#326071, #27334d);
+  background: -o-linear-gradient(#326071, #27334d);
+  background: linear-gradient(#326071, #27334d); }
+
+.dataBlock {
+  background: #152234; }
+  .dataBlock h3 {
+    color: #ffffff; }
+  .dataBlock p {
+    color: #ffffff; }
+
+.weatherData .weather-icon {
+  -webkit-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease; }
+
+.weatherData .weatherCol {
+  background-color: rgba(8, 57, 46, 0.3); }
+
+.weatherData .weatherCol:hover {
+  background-color: #24938f;
+  -webkit-box-shadow: 0px 0px 20px #00eaff;
+  box-shadow: 0px 0px 20px #00eaff; }

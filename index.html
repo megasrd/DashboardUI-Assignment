@@ -25,31 +25,6 @@
         
         <div class="stats-panel">
             
-
-<!--
-            <div class="block1 stats-block ui-panel-popfx"> 
-            <p> Total Population </p>
-                
-            <p class="city-pop" v-html="city_pop"> </p>
-                
-            </div>
-            <div class="block2 stats-block ui-panel-popfx"> 
-            <p> Travel Rating </p>
-            </div>
-            <div class="block3 stats-block ui-panel-popfx">
-            <p> Recent Events </p>
-            </div>
-            <div class="block4 stats-block ui-panel-popfx">
-            <p v-html="city_dotw"> </p>
-            </div>
-            <div class="block5 stats-block ui-panel-popfx"> 
-                <p v-html="city_weatherTemp"> </p>
-            </div>
-            <div class="block6 stats-block ui-panel-popfx">
-                <p v-html="city_weatherType"> </p>
-            </div>
--->
-
             <div class="dataBlock db-type1 weatherData">
                 <h3> TODAY'S WEATHER </h3>
                 <div v-bind:style="{ 'background-image': 'url(' + city_today_image + ')' }" class="weather-icon"> </div>
@@ -112,12 +87,10 @@
         <div class="location-hover">
 
                <div class="location_name-container"> 
+                   
                     <p class="city-names" onclick="set_cityData(1)"> Cape Town </p>
                     <p class="city-names" onclick="set_cityData(2)"> Tokyo</p>
-<!--
-                    <p class="city-names" onclick="set_cityData(3)"> New York </p>
-                    <p class="city-names" onclick="set_cityData(4)"> Munich </p>
--->
+                   
                 </div>
 
             </div>
