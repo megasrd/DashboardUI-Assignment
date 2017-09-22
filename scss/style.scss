@@ -151,17 +151,19 @@ h2 {
 
 
 .location-hover {
+    
   position: absolute;
   bottom: 40vh;
   left: -7em;
   width: 150px;
-  height: 20vh;
+  height: 15vh;
   padding: 0.1vw;
   background-color: #991e1e;
   transition: all 0.5s ease;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   text-align: left;
+    
 }
 
 .location_name-container {}
