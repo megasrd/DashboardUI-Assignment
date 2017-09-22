@@ -62,7 +62,7 @@ var city1 = {
     forecast3_weather_temp : "14",
     forecast3_weather_type : "Cloudy",
     forecast3_weather_image: 'images/icons/light/light_weatherIcons04.png',
-    cityImage : "images/capetown.jpg",
+    cityImage : "../images/capetown.jpg",
     cityCSSTemp: 'css/city2.css'
 };
 
@@ -80,7 +80,7 @@ var city2 = {
     forecast3_weather_temp : "12",
     forecast3_weather_type : "Sunny",
     forecast3_weather_image: 'images/icons/light/light_weatherIcons01.png',
-    cityImage : "images/japan.jpg",
+    cityImage : "../images/japan.jpg",
     cityCSSTemp: "css/city1.css"
 };
 
