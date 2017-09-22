@@ -29,7 +29,7 @@
             
             <div class="dataBlock db-type1 weatherData">
                 <h3> TODAY'S WEATHER </h3>
-                <div v-bind:style="{ 'background-image': 'url(' + city_today_image + ')' }" class="weather-icon"> </div>
+                <div v-bind:style="{ 'background-image': 'url(' + '../' + city_today_image + ')' }" class="weather-icon"> </div>
                 <p v-html="today_temp"> Weather Temp </p>
                 <p v-html="today_type"> Weather Type </p>
             </div>
